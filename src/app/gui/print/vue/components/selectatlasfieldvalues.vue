@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import autocompleteOptions  from 'gui/external/select2/options/autocomplete';
-  import {autocompleteMixin, select2Mixin}  from 'gui/vue/vue.mixins';
+  import autocompleteOptions from 'gui/external/select2/options/autocomplete';
+  import {autocompleteMixin, select2Mixin} from 'gui/vue/vue.mixins';
   export default {
     name: "selectAtlasFieldValues",
     mixins: [autocompleteMixin, select2Mixin],
@@ -53,7 +53,7 @@
     async mounted() {
       await this.$nextTick();
       let {field_name:field, qgs_layer_id:layerId} = this.atlas;
-      setTimeout(()=>{
+      setTimeout(() => {
 
       });
       this.select2 = $('#print_atlas_autocomplete').select2({
@@ -83,7 +83,7 @@
         this.values.push(value);
         this.emitValues();
       });
-      this.select2.on('select2:unselect', async evt =>{
+      this.select2.on('select2:unselect', async evt => {
         const value =  evt.params.data.id;
         this.values = this.values.filter(currentValue => currentValue !== value);
         this.emitValues();

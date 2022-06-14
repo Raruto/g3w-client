@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  import Projections  from 'g3w-ol/src/projection/projections';
+  import Projections from 'g3w-ol/src/projection/projections';
   export default {
     name: "wmpspanel",
     data() {
@@ -121,16 +121,16 @@
 </script>
 
 <style scoped>
-  .g3w-wms-panel-title{
+  .g3w-wms-panel-title {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
   }
-  button.wms-add-layer-buttom{
+  button.wms-add-layer-buttom {
     width: 100%;
     margin-top: 10px;
   }
-  .g3w-wms-external-panel-layer-added-message{
+  .g3w-wms-external-panel-layer-added-message {
     font-weight: bold;
     color: red;
     margin: 5px 0;

@@ -49,7 +49,7 @@
     flex-direction: column;
     margin: 5px 0 5px 0;
   }
-  .g3w-layer-positions-info-message{
+  .g3w-layer-positions-info-message {
     margin-bottom: 3px;
   }
 

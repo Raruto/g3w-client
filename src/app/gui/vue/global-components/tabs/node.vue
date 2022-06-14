@@ -38,9 +38,9 @@
 
 <script>
   import G3wInput from 'gui/inputs/g3w-input.vue';
-  import Fields  from 'gui/fields/fields';
-  import ProjectRegistry  from 'core/project/projectsregistry';
-  import GUI  from 'gui/gui';
+  import Fields from 'gui/fields/fields';
+  import ProjectRegistry from 'core/project/projectsregistry';
+  import GUI from 'gui/gui';
   export default {
     name: "node",
     props: ['contenttype', 'node', 'fields', 'showTitle', 'addToValidate', 'changeInput', 'layerid', 'feature', 'showRelationByField',  'handleRelation'],
@@ -163,7 +163,7 @@
 </script>
 
 <style scoped>
-  .tab-node{
+  .tab-node {
     min-width: 0;
     overflow: hidden;
   }
@@ -184,7 +184,7 @@
     grid-auto-columns: minmax(0, 1fr);
     grid-auto-flow: column;
   }
-  .row.mobile{
+  .row.mobile {
     margin-bottom: 0 !important;
   }
 </style>

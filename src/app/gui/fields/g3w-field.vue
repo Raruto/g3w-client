@@ -7,8 +7,8 @@
 </template>
 
 <script>
-  import fieldsService  from 'gui/fields/fieldsservice';
-  import Fields  from './fields';
+  import fieldsService from 'gui/fields/fieldsservice';
+  import Fields from './fields';
   export default {
     name: "g3w-field",
     props: {

@@ -1,9 +1,9 @@
-import Validator  from './validator';
+import Validator from './validator';
 
-class CheckBoxValidator extends Validator{
-  constructor(options={}) {
-    super(options);
-  }
+class CheckBoxValidator extends Validator {
+  // constructor(options={}) {
+  //   super(options);
+  // }
 
   validate(value) {
     const values = this.options.values || [];
@@ -12,5 +12,3 @@ class CheckBoxValidator extends Validator{
 }
 
 export default CheckBoxValidator;
-
-

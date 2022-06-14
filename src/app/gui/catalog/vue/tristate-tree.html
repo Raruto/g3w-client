@@ -27,7 +27,7 @@
     </span>
     <span v-show="!layerstree.hidden" class="checkbox-layer" :class="parentFolder ? 'child' : 'root'">
       <span class="collapse-expande-collapse-icon" v-if="this.legendlayerposition === 'toc'"
-        @click.self.stop="()=> layerstree.legend.show = !layerstree.legend.show"
+        @click.self.stop="() => layerstree.legend.show = !layerstree.legend.show"
         :class="g3wtemplate.getFontClass(layerstree.legend.show ? 'caret-down' : 'caret-right')">
       </span>
       <span :style="{paddingLeft: this.legendlayerposition === 'toc' ? '5px' : (!layerstree.legend && layerstree.external) ? '0' :

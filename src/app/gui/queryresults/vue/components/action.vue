@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import {t}  from 'core/i18n/i18n.service';
+  import {t} from 'core/i18n/i18n.service';
   export default {
     name: "action",
     data() {
@@ -40,7 +40,7 @@
           const originalDataTitle = element.attr('data-original-title');
           element.attr('data-original-title', t(action.hint_change.hint));
           element.tooltip('show');
-          setTimeout(()=>{
+          setTimeout(() => {
             element.attr('data-original-title', originalDataTitle);
             element.tooltip('show');
           }, action.hint_change.duration || 600)

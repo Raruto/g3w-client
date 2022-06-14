@@ -8,9 +8,9 @@
 </template>
 
 <script>
-  import { ALLVALUE }  from '../../constants';
-  import autocompleteOptions  from 'gui/external/select2/options/autocomplete';
-  import  {select2Mixin}  from 'gui/vue/vue.mixins';
+  import { ALLVALUE } from 'gui/search/constants';
+  import autocompleteOptions from 'gui/external/select2/options/autocomplete';
+  import {select2Mixin} from 'gui/vue/vue.mixins';
   export default {
     name: "select2",
     props: ['forminput','autocompleteRequest'],

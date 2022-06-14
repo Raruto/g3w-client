@@ -46,7 +46,7 @@
 <script>
   import TabService from 'core/expression/tabservice';
   import Node from './node.vue';
-  import GUI  from 'gui/gui';
+  import GUI from 'gui/gui';
   import utils from 'core/utils/utils';
   export default {
     name: "tabs",
@@ -94,7 +94,7 @@
         return this.contenttype === 'editing' && this.fields.filter(field => field.validate.required).map(field => field.name);
       },
       show() {
-        return this.tabs.reduce((accumulator, tab) =>{
+        return this.tabs.reduce((accumulator, tab) => {
           return accumulator || (tab.visible === undefined || !!tab.visible)
         }, false)
       }
@@ -133,9 +133,9 @@
         if (this.contenttype === 'editing') {
           if (tab.required === undefined) tab.required = this.setEditingRequireTab(tab);
           if (tab.visibility_expression) {
-            tab.visibility_expression.referenced_columns.forEach(column =>{
+            tab.visibility_expression.referenced_columns.forEach(column => {
               const field = this.fields.find(field => field.name === column);
-              this.unwatch.push(this.$watch(()=> field.value, async value=>{
+              this.unwatch.push(this.$watch(() => field.value, async value => {
                 this.feature.set(field.name, value);
                 this.setVisibility(tab);
               }))
@@ -147,7 +147,7 @@
       this.root_tabs = [];
       if (!this.group) {
         const nodes = [];
-        this.tabs.forEach(tab_node =>{
+        this.tabs.forEach(tab_node => {
           if (tab_node.nodes) nodes.push(tab_node);
           else {
             if (nodes.length) {

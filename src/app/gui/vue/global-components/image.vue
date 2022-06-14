@@ -62,7 +62,7 @@
   .img-responsive {
     cursor: pointer;
   }
-  .g3w-image{
+  .g3w-image {
     padding-left: 0 !important;
     min-width: 100px;
     max-width: 100%;

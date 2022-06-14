@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import GUI  from 'gui/gui';
+    import GUI from 'gui/gui';
     export default {
         name: 'resize-icon',
         props: {

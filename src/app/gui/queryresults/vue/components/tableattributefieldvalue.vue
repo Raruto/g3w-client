@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import Link from '../../../fields/link.vue';
-  import VueField from '../../../fields/vuefield.vue';
-  import  {fieldsMixin}  from 'gui/vue/vue.mixins';
+  import Link from 'gui/fields/link.vue';
+  import VueField from 'gui/fields/vuefield.vue';
+  import {fieldsMixin} from 'gui/vue/vue.mixins';
   export default {
     name: "tableattributefieldvalue",
     props: {

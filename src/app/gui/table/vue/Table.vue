@@ -31,8 +31,8 @@
   import G3wTableToolbar from './components/g3w-table-toolbar.vue';
   import Field from 'gui/fields/g3w-field.vue';
   import utils from 'core/utils/utils';
-  import {resizeMixin}  from 'gui/vue/vue.mixins';
-  import GUI  from 'gui/gui';
+  import {resizeMixin} from 'gui/vue/vue.mixins';
+  import GUI from 'gui/gui';
   let dataTable;
   let fieldsComponents = [];
   let eventHandlers = {
@@ -100,9 +100,9 @@
             const hasGeometry = !!feature.geometry;
             $(rowElement).addClass('feature_attribute');
             feature.selected && $(rowElement).addClass('selected');
-            $(rowElement).on('click', ()=> hasGeometry && this.zoomAndHighLightFeature(feature));
+            $(rowElement).on('click', () => hasGeometry && this.zoomAndHighLightFeature(feature));
             $(rowElement).on('mouseover', () => hasGeometry && this.zoomAndHighLightFeature(feature, false));
-            $(rowElement).children().each((index, element)=> {
+            $(rowElement).children().each((index, element) => {
               const header = this.state.headers[index];
               let contentDOM;
               if (header === null) {
@@ -137,7 +137,7 @@
             })
           }
         });
-        setTimeout(()=> this.reloadLayout(), 0)
+        setTimeout(() => this.reloadLayout(), 0)
       },
       async resize() {
         await this.$nextTick();
@@ -207,7 +207,7 @@
           "deferLoading": this.state.allfeatures
         });
         this.$options.service.on('ajax-reload', dataTable.ajax.reload);
-        this.changeColumn = utils.debounce(async (event, index) =>{
+        this.changeColumn = utils.debounce(async (event, index) => {
           dataTable.columns(index).search(event.target.value.trim()).draw();
         });
       } else { // no pagination all data
@@ -220,10 +220,10 @@
         }, 600);
         eventHandlers.nopagination['search.dt'] = debounceSearch;
         dataTable.on('search.dt', debounceSearch);
-        dataTable.on('length.dt', (evt, settings, length)=> {
+        dataTable.on('length.dt', (evt, settings, length) => {
           this.$options.service.setAttributeTablePageLength(length)
         });
-        this.changeColumn = utils.debounce(async (event, index) =>{
+        this.changeColumn = utils.debounce(async (event, index) => {
           dataTable.columns(index).search(event.target.value.trim()).draw();
           this.$options.service.setFilteredFeature(dataTable.rows( {search:'applied'})[0]);
         });
@@ -242,10 +242,10 @@
         }
       });
       $('#g3w-table-toolbar').html(G3WTableToolbarInstance.$mount().$el);
-      this.$options.service.on('redraw', data =>{
+      this.$options.service.on('redraw', data => {
         dataTable.clear();
         dataTable.draw(false);
-        setTimeout(()=>{
+        setTimeout(() => {
           dataTable.rows.add(data);
           dataTable.draw(false);
           this.createdContentBody();

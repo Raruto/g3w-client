@@ -31,7 +31,7 @@
     white-space: pre-line;
     background-color: #384246 !important;
   }
-  .help_icon{
+  .help_icon {
     text-align: center;
     font-size: 0.7em;
     margin-top: -4px;
@@ -48,7 +48,7 @@
     border: 1px solid #ffffff;
     border-radius: 50%;
   }
-  .g3w-help-message-content{
+  .g3w-help-message-content {
     max-height: 200px;
     padding: 10px;
     overflow-y: auto;

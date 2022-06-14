@@ -26,7 +26,7 @@
 </template>
 
 <script>
-  import Inputs  from './inputs';
+  import Inputs from './inputs';
   export default {
     name: "g3w-input",
     props: {

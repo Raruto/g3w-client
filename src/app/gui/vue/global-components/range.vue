@@ -67,7 +67,7 @@
       }
     },
     created() {
-      this.changedValue =  this.sync ? ()=> this.$emit('changed') : utils.debounce(value => {
+      this.changedValue =  this.sync ? () => this.$emit('changed') : utils.debounce(value => {
         this.emitChangeValue(value)
       })
     },

@@ -27,8 +27,8 @@
 </template>
 
 <script>
-  import ApplicationState  from 'core/applicationstate';
-  import GUI  from 'gui/gui';
+  import ApplicationState from 'core/applicationstate';
+  import GUI from 'gui/gui';
   const TOOLSTATE = {
     alert: {
       color: 'red'

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-  import GUI  from 'gui/gui';
+  import GUI from 'gui/gui';
   const COLORS = {
     success: {
       backgroundColor: '#62ac62',
@@ -160,7 +160,7 @@
     async mounted() {
       if (this.autoclose) {
         await this.$nextTick();
-        const timeout = setTimeout(() =>{
+        const timeout = setTimeout(() => {
           this.closeUserMessage();
           clearTimeout(timeout)
         }, this.duration)

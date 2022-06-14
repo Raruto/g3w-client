@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import GUI  from 'gui/gui';
+  import GUI from 'gui/gui';
   export default {
     name: "g3w-resize",
     props: {
@@ -23,7 +23,7 @@
       },
       moveFnc: {
         type: Function,
-        default: evt=> console.log(evt)
+        default: evt => console.log(evt)
       },
       style:{
         type: Object,

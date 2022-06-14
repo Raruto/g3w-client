@@ -9,7 +9,7 @@
 
 <script>
   import Field from './field.vue';
-  import utils  from 'core/utils/utils';
+  import utils from 'core/utils/utils';
   export default {
     name: "image",
     props: ['state'],

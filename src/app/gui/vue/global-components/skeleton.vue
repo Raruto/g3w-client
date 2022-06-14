@@ -17,7 +17,7 @@
   export default {
     name: "skeleton",
     mounted() {
-      this.$nextTick(()=>{})
+      this.$nextTick(() => {})
     }
   }
 </script>

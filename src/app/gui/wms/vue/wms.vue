@@ -38,7 +38,7 @@
 </template>
 
 <script>
-  import utils  from 'core/utils/utils';
+  import utils from 'core/utils/utils';
   export default {
     name: "sidebaritem",
     data() {
@@ -83,11 +83,11 @@
 </script>
 
 <style scoped>
-  .g3w-add-wms-url-message{
+  .g3w-add-wms-url-message {
     font-weight: bold;
     color: #000000;
   }
-  .g3w-wmsurl-error{
+  .g3w-wmsurl-error {
     background-color: red;
   }
   .g3w-wmsurl-already-added {

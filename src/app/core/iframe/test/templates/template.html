@@ -10,12 +10,12 @@
 <script>
   const MESSAGE = {}; // message to send to iframe
   const iframe = document.querySelector('iframe';
-  const getMessage = evt =>{
+  const getMessage = evt => {
     const {action, response} = evt.data;
     //get action ready
     if (action === "app:ready") {
       // send message to iframe
-      setTimeout(()=>{
+      setTimeout(() => {
         iframe.contentWindow.postMessage(MESSAGE, '*')
       }, 2000)
     }

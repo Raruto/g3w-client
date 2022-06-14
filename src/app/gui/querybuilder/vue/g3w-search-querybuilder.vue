@@ -35,8 +35,8 @@
 </template>
 
 <script>
-  import Service from '../service';
-  import QueryBuilderUIFactory  from '../querybuilderuifactory';
+  import Service from 'gui/querybuilder/service';
+  import QueryBuilderUIFactory from 'gui/querybuilder/querybuilderuifactory';
   export default {
     name: "g3w-querybuilder-search",
     props: {
@@ -73,7 +73,7 @@
         Service.run({
           layerId: this.querybuildersearch.layerId,
           filter:  this.querybuildersearch.filter
-        }).finally(()=>{
+        }).finally(() => {
           this.loading = false;
         })
       }

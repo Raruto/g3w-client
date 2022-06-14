@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  const Validators  from 'core/validators/inputs/validators';
+  const Validators from 'core/validators/inputs/validators';
   export default {
     props: {
       columntypes: {

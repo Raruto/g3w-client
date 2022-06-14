@@ -108,7 +108,7 @@
 </template>
 
 <script>
-  import MetadataMixin from '../metadatamixin';
+  import MetadataMixin from 'gui/metadata/vue/components/metadatamixin';
 
   export default {
     name: "layer",
@@ -174,7 +174,7 @@
     background-color: #eeeeee;
     overflow: auto;
   }
-  .spatial-tab{
+  .spatial-tab {
     font-weight: bold;
   }
 

@@ -32,7 +32,7 @@
       }
     },
     created() {
-      this.unwatch =  this.$watch(()=>ApplicationState.lng, ()=>{
+      this.unwatch =  this.$watch(() =>ApplicationState.lng, () => {
         this.config.choices.forEach(choice => $(this.$refs[choice.type]).text(t(choice.label)));
         $(this.$refs.g3w_select_feature_featurepolygon).select2().trigger('change');
       })
@@ -45,13 +45,13 @@
 </script>
 
 <style scoped>
-  .g3w-polygonattributes-types-title{
+  .g3w-polygonattributes-types-title {
     font-weight: bold;
     padding: 3px;
     color: white;
     margin: 0 0 5px 0;
   }
-  .g3w-polygonattributes-types-content{
+  .g3w-polygonattributes-types-content {
     display: flex;
     justify-content: space-between;
     padding: 3px;

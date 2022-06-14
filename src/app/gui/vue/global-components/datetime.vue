@@ -14,7 +14,7 @@
 
 <script>
   import ApplicationState from 'core/applicationstate';
-  import utils  from 'core/utils/utils';
+  import utils from 'core/utils/utils';
   export default {
     name: "datetime",
     props: {
@@ -91,7 +91,7 @@
       this.datetimeinputelement.on("dp.hide", evt => {
         //$(this.$refs.iddatetimepicker).data("DateTimePicker").show();
       });
-      ApplicationState.ismobile && setTimeout(()=>datetimeinputelement.blur());
+      ApplicationState.ismobile && setTimeout(() =>datetimeinputelement.blur());
     },
     watch: {
       value(datetime) {

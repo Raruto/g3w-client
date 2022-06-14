@@ -1,21 +1,22 @@
-import Layer  from './layer';
-import TableLayer  from './tablelayer';
-import VectorLayer  from './vectorlayer';
-import ImageLayer  from './imagelayer';
-import BaseLayers  from './baselayers/baselayers';
-import GeojsonLayer  from './geojson';
+import Layer from './layer';
+import TableLayer from './tablelayer';
+import VectorLayer from './vectorlayer';
+import ImageLayer from './imagelayer';
+import BaseLayers from './baselayers/baselayers';
+import GeojsonLayer from './geojson';
 
 // Class to build layer based on configuration
 class LayerFactory {
   constructor() {
   }
+
   build(config, options) {
     // return the layer instance
     const layerClass = this.get(config);
-    return layerClass ? new layerClass(config, options) : null
-  };
+    return layerClass ? new layerClass(config, options) : null;
+  }
 
-  get(config={}) {
+  get(config = {}) {
     let LayerClass;
     const serverType = config.servertype;
     switch (serverType) {
@@ -30,8 +31,8 @@ class LayerFactory {
               Layer.SourceTypes.WFS,
               Layer.SourceTypes.CSV,
               Layer.SourceTypes.ORACLE,
-              Layer.SourceTypes.OGR
-            ].find(sourcetype => sourcetype === config.source.type)) {
+              Layer.SourceTypes.OGR,
+            ].find((sourcetype) => sourcetype === config.source.type)) {
               if (config.geometrytype && config.geometrytype === 'NoGeometry') LayerClass = TableLayer;
               else LayerClass = ImageLayer;
             }
@@ -39,13 +40,13 @@ class LayerFactory {
             Layer.SourceTypes.WMST,
             Layer.SourceTypes.WCS,
             Layer.SourceTypes.WMS,
-            Layer.SourceTypes.GDAL
-          ].find(sourcetype => sourcetype === config.source.type)) LayerClass = ImageLayer;
+            Layer.SourceTypes.GDAL,
+          ].find((sourcetype) => sourcetype === config.source.type)) LayerClass = ImageLayer;
         }
         break;
       case Layer.ServerTypes.OGC:
-        if(config.source) {
-          const type = config.source.type;
+        if (config.source) {
+          const { type } = config.source;
           switch (type) {
             case Layer.SourceTypes.WMS:
               LayerClass = ImageLayer;
@@ -81,4 +82,4 @@ class LayerFactory {
   }
 }
 
-export default  new LayerFactory();
+export default new LayerFactory();
