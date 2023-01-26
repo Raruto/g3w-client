@@ -1,6 +1,5 @@
 *~
 .idea
-package-lock.json
 /build
 /config.js
 /cypress.env.json
