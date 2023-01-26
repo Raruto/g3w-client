@@ -37,8 +37,7 @@
     "vue-cookie-law": "^1.13.3"
   },
   "overrides": {
-    "graceful-fs": "^4.2.10",
-    "nested-error-stacks": "^2.1.1"
+    "graceful-fs": "^4.2.10"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
