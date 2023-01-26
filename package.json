@@ -14,7 +14,8 @@
     "docker:down": "npm run docker down",
     "docker:config": "npm run docker config",
     "docker:logs": "npm run docker logs",
-    "test": "gulp test",
+    "lint": "eslint src",
+    "test": "npm run lint && gulp test",
     "cy:open": "cypress open",
     "preversion": "npm run test",
     "version": "npm run build && git add -A",
@@ -59,6 +60,8 @@
     "core-js-latest": "npm:core-js@^3.16.2",
     "current-git-branch": "^1.1.0",
     "del": "^2.2.2",
+    "eslint": "^8.32.0",
+    "eslint-plugin-vue": "^9.9.0",
     "generator-browserify": "^0.4.1",
     "generator-karma": "^2.0.0",
     "gulp": "^3.9.1",
@@ -121,6 +124,50 @@
     "yargs": "^8.0.2"
   },
   "browserslist": "defaults",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "jquery": true
+    },
+    "globals": {
+      "_": true,
+      "$script": true,
+      "bootbox": true,
+      "crossroads": true,
+      "EventEmitter": true,
+      "g3wsdk": true,
+      "google": true,
+      "i18next": true,
+      "i18nextXHRBackend": true,
+      "isMobile": true,
+      "initConfig": true,
+      "jqueryI18next": true,
+      "JSZip": true,
+      "jsts": true,
+      "moment": true,
+      "ol": true,
+      "proj4": true,
+      "Vue": true,
+      "X2JS": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/recommended"
+    ],
+    "ignorePatterns": ["src/assets/**", "src/plugins/**"],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "eqeqeq": [
+        "error",
+        "smart"
+      ]
+    }
+  },
   "engines": {
     "node": ">=16.15.0",
     "npm": ">=8.5.5"
